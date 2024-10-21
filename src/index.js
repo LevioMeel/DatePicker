@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 import { createRoot } from "react-dom/client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //DatePicker
 import DatePicker from "react-datepicker";
@@ -52,6 +52,7 @@ function DateBlock() {
     setEndDate(today);
   }
   const handleLast7Click = () => {
+    console.log("work");
     setDate(6);
   };
 
