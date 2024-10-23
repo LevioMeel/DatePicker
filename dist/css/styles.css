@@ -1271,6 +1271,7 @@ html {
   transition: opacity 0.2s;
   opacity: 0;
   visibility: hidden;
+  z-index: 5;
 }
 .project__dropdown {
   width: 100%;
