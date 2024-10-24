@@ -131,29 +131,55 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // }
 
+  //-------- Функционал выбора позиций для их удаления
   let itemPosActiveCount = 0;
+  //Чекбоксы отдельных позиций
   const itemsEvent = () => {
     const allItems = document.querySelectorAll(".item-pos");
-    const deleteButton = document.querySelector(".pos-pag__delete");
-    const deleteCount = document.querySelector(".pos-pag__delete-count");
-    const wrap = document.querySelector(".pos-pag__wrap");
+    const button = document.querySelector(".all-positions");
 
     allItems.forEach((el) => {
       const input = el.querySelector("input");
       input.addEventListener("click", () => {
         input.checked ? itemPosActiveCount++ : itemPosActiveCount--;
-        //Показать или убрать кнопку удалить
-        itemPosActiveCount > 0
-          ? (deleteButton.style.display = "flex")
-          : (deleteButton.style.display = "none");
-
-        itemPosActiveCount > 0
-          ? (wrap.style.justifyContent = "flex-end")
-          : (wrap.style.justifyContent = "space-between");
-        deleteCount.textContent = itemPosActiveCount;
+        button.checked = false;
+        positionsState(deleteButton, deleteCount, wrap);
       });
     });
   };
+  //Общий чекбокс
+  const choseAllPositions = () => {
+    const allItems = document.querySelectorAll(".item-pos");
+    const button = document.querySelector(".all-positions");
+
+    button.addEventListener("click", (e) => {
+      allItems.forEach((el) => {
+        const input = el.querySelector("input");
+        input.checked = button.checked;
+        button.checked
+          ? (itemPosActiveCount = allItems.length)
+          : (itemPosActiveCount = 0);
+
+        positionsState(deleteButton, deleteCount, wrap);
+      });
+    });
+  };
+  const deleteButton = document.querySelector(".pos-pag__delete");
+  const deleteCount = document.querySelector(".pos-pag__delete-count");
+  const wrap = document.querySelector(".pos-pag__wrap");
+  const positionsState = (deleteButton, deleteCount, wrap) => {
+    itemPosActiveCount > 0
+      ? (deleteButton.style.display = "flex")
+      : (deleteButton.style.display = "none");
+
+    itemPosActiveCount > 0
+      ? (wrap.style.justifyContent = "flex-end")
+      : (wrap.style.justifyContent = "space-between");
+    deleteCount.textContent = itemPosActiveCount;
+  };
+  // Функционал выбора позиций для их удаления --------
+
+  choseAllPositions();
   itemsEvent();
 
   //Сокращенный вид
@@ -171,5 +197,35 @@ document.addEventListener("DOMContentLoaded", () => {
   };
   shortPositions();
 
+  //Показать меню сортировки у дат
+  document.querySelector(".header-pos").addEventListener("click", (event) => {
+    const item = event.target.closest(".header-pos__date");
+    const dropClicked =
+      event.target.classList.contains("project__dropdown-wrapper") ||
+      event.target.classList.contains("pos-pag__variable");
+
+    //Клик по дате
+    if (item && !dropClicked) {
+      const countPages = () => {
+        const t = item;
+        var e = t.querySelector(".header-pos__date-button");
+        let r = !1;
+        const c = () => {
+          t.classList.remove("active"), (r = !1);
+        };
+        t.classList.toggle("active"), (r = !r);
+        window.addEventListener("click", (e) => {
+          r && !t.contains(e.target) && c();
+        }),
+          window.addEventListener("keydown", (e) => {
+            r && "Escape" === e.key && c();
+          });
+      };
+      countPages();
+    }
+  });
+
   //POSITIONS -------------------------------------
 });
+
+// data - атрибут + класс

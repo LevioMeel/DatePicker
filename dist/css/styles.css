@@ -798,10 +798,22 @@ html {
   min-width: 212px;
   max-width: 212px;
 }
+.header-pos__date {
+  position: relative;
+}
+.header-pos__date .project__dropdown-wrapper {
+  width: 90px;
+}
 .header-pos__date span {
   margin: 0 8px;
 }
-
+.header-pos__date-button {
+  display: flex;
+}
+.header-pos__date.active .project__dropdown-wrapper {
+  opacity: 1;
+  visibility: visible;
+}
 /* ----- ITEM-POS */
 .item-pos {
   height: 96px;
@@ -1536,7 +1548,8 @@ html {
   border-right: 1px solid #e5e5ea;
 }
 .sidebar[data-expanded="true"] {
-  width: 76px;
+  max-width: 76px;
+  min-width: 76px;
 }
 .sidebar__header {
   margin-bottom: 32px;
