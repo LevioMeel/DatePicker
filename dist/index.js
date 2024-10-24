@@ -226,6 +226,16 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   //POSITIONS -------------------------------------
+
+  document.querySelector(".burger").addEventListener("click", (el) => {
+    document.querySelector(".content").style.width = "calc(100% - 318px)";
+    console.log("ww1");
+  });
+  document.querySelector(".cl").addEventListener("click", (el) => {
+    console.log("ww2");
+
+    document.querySelector(".content").style.width = "calc(100% - 76px)";
+  });
 });
 
 // data - атрибут + класс

@@ -1551,6 +1551,9 @@ html {
   max-width: 76px;
   min-width: 76px;
 }
+/* .content {
+  width: calc(100% - 35px);
+} */
 .sidebar__header {
   margin-bottom: 32px;
   display: flex;
