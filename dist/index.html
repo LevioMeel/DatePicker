@@ -581,18 +581,18 @@
                     <div class="settings__cut">
                       <label
                       for="light-switch-2"
-                      class="gui-switch gui-switch-popup"
+                      class="gui-switch"
                       >
-                      <input type="checkbox" role="switch" id="light-switch-2" class="pop-variable"/>
+                      <input type="checkbox" role="switch" id="light-switch-2"/>
                       <span>Сокращенный вид</span>
                      </label>                  
                     </div>
                     <div class="settings__summ">
                       <label
                       for="light-switch-3"
-                      class="gui-switch gui-switch-popup"
+                      class="gui-switch"
                     >
-                      <input type="checkbox" role="switch" id="light-switch-3" class="pop-variable"/>
+                      <input type="checkbox" role="switch" id="light-switch-3"/>
                       <span>Вычислить суммы</span>
                     </label>
                     </div>
@@ -611,7 +611,7 @@
                   </div>
                   <div class="body-panel__delete">
                     <span>Очистить данные за </span>
-                    <input type="text" class="input body-panel--input" placeholder="1">
+                    <input type="text" class="input short--input" placeholder="1">
                     <span>дней</span>
                   </div>
                   <button class="delete-button btn-reset">
@@ -800,32 +800,8 @@
                       </div>
                     </div>
                   </div>
-                  <div class="item-pos__data blue-data">
-                    <div class="item-pos__position">7</div>
-                    <div class="item-pos__increase increase-down">
-                      <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M5.92857 10C5.84898 10 5.77096 9.97931 5.70326 9.94026C5.63555 9.90121 5.58084 9.84533 5.54525 9.77889C5.50965 9.71244 5.49458 9.63806 5.50173 9.56408C5.50888 9.49009 5.53796 9.41943 5.58571 9.36L8.15714 6.16C8.19706 6.11032 8.24883 6.07 8.30834 6.04223C8.36785 6.01446 8.43347 6 8.5 6C8.56653 6 8.63215 6.01446 8.69166 6.04223C8.75117 6.07 8.80294 6.11032 8.84286 6.16L11.4143 9.36C11.462 9.41943 11.4911 9.49009 11.4983 9.56408C11.5054 9.63806 11.4903 9.71244 11.4548 9.77889C11.4192 9.84533 11.3644 9.90121 11.2967 9.94026C11.229 9.97931 11.151 10 11.0714 10H5.92857Z" />
-                      </svg>
-                      <span>11</span>
-                    </div>
-                    <div class="item-pos__infos">
-                      <div class="item-pos__info">
-                        <span class="item-pos__name">Клики</span>
-                        <span class="item-pos__text">7128</span>
-                      </div>
-                      <div class="item-pos__info">
-                        <span class="item-pos__name">CTR</span>
-                        <span class="item-pos__text">20.01%</span>
-                      </div>
-                      <div class="item-pos__info">
-                        <span class="item-pos__name">Показы</span>
-                        <span class="item-pos__text">1145</span>
-                      </div>
-                      <div class="item-pos__info">
-                        <span class="item-pos__name">Спрос</span>
-                        <span class="item-pos__text">8713</span>
-                      </div>
-                    </div>
+                  <div class="item-pos__data no-data">
+                    <span>Нет данных</span>
                   </div>
                   <div class="item-pos__data blue-data">
                     <div class="item-pos__position">7</div>
@@ -1115,6 +1091,146 @@
                         <span class="item-pos__text">8713</span>
                       </div>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="positions__total">
+              <div class="positions__base">
+                <div>
+                  Всего слов
+                  <span class="positions__total-words">300</span>
+                </div>
+                <div class="positions__total-pos">14500</div>
+              </div>
+              <div class="positions__others">
+                <div class="positions__total-other">
+                  <span>14500</span>
+                </div>
+                <div class="positions__total-other">
+                  <span>20.01%</span>
+                </div>
+                <div class="positions__total-other">
+                  <span>14500</span>
+                </div>
+                <div class="positions__total-other">
+                  <span>14500</span>
+                </div>
+              </div>
+              <div class="positions__dates">
+                <div class="positions__date">
+                  <div class="positions__total-value">
+                    <span>Клики</span>
+                    <span class="positions__total-clicks">7128</span>
+                  </div>
+                  <div class="positions__total-value positions__total-value--m">
+                    <span>Показы</span>
+                    <span class="positions__total-shows">1145</span>
+                  </div>
+                  <div class="positions__total-value">
+                    <span>В топ-50</span>
+                    <span class="positions__total-rates">11</span>
+                  </div>
+                </div>
+                <div class="positions__date">
+                  <div class="positions__total-value">
+                    <span>Клики</span>
+                    <span class="positions__total-clicks">7128</span>
+                  </div>
+                  <div class="positions__total-value positions__total-value--m">
+                    <span>Показы</span>
+                    <span class="positions__total-shows">1145</span>
+                  </div>
+                  <div class="positions__total-value">
+                    <span>В топ-50</span>
+                    <span class="positions__total-rates">11</span>
+                  </div>
+                </div>
+                <div class="positions__date">
+                  <div class="positions__total-value">
+                    <span>Клики</span>
+                    <span class="positions__total-clicks">7128</span>
+                  </div>
+                  <div class="positions__total-value positions__total-value--m">
+                    <span>Показы</span>
+                    <span class="positions__total-shows">1145</span>
+                  </div>
+                  <div class="positions__total-value">
+                    <span>В топ-50</span>
+                    <span class="positions__total-rates">11</span>
+                  </div>
+                </div>
+                <div class="positions__date">
+                  <div class="positions__total-value">
+                    <span>Клики</span>
+                    <span class="positions__total-clicks">7128</span>
+                  </div>
+                  <div class="positions__total-value positions__total-value--m">
+                    <span>Показы</span>
+                    <span class="positions__total-shows">1145</span>
+                  </div>
+                  <div class="positions__total-value">
+                    <span>В топ-50</span>
+                    <span class="positions__total-rates">11</span>
+                  </div>
+                </div>
+                <div class="positions__date">
+                  <div class="positions__total-value">
+                    <span>Клики</span>
+                    <span class="positions__total-clicks">7128</span>
+                  </div>
+                  <div class="positions__total-value positions__total-value--m">
+                    <span>Показы</span>
+                    <span class="positions__total-shows">1145</span>
+                  </div>
+                  <div class="positions__total-value">
+                    <span>В топ-50</span>
+                    <span class="positions__total-rates">11</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="pos-pag">
+            <div class="pos-pag__delete">
+              <button class="delete-button btn-reset">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <mask id="mask0_2082_5379" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="25">
+                    <rect y="0.5" width="24" height="24" fill="#D9D9D9" />
+                  </mask>
+                  <g mask="url(#mask0_2082_5379)">
+                    <path d="M5.975 7.16667V7.06667H5.875H5.1V5.48889H9.375H9.475V5.38889V4.6H14.525V5.38889V5.48889H14.625H18.9V7.06667H18.125H18.025V7.16667V18.7222C18.025 19.1849 17.864 19.5782 17.5397 19.9076C17.2154 20.237 16.829 20.4 16.375 20.4H7.625C7.171 20.4 6.78456 20.237 6.46033 19.9076C6.13605 19.5782 5.975 19.1849 5.975 18.7222V7.16667ZM16.475 7.16667V7.06667H16.375H7.625H7.525V7.16667V18.7222V18.8222H7.625H16.375H16.475V18.7222V7.16667ZM11.025 9.04444V16.8444H9.475V9.04444H11.025ZM14.525 9.04444V16.8444H12.975V9.04444H14.525Z" fill="#E50C00" stroke="#FDF4F4" stroke-width="0.2" />
+                  </g>
+                </svg>
+                <span>Удалить</span>
+              </button>
+              <span>Выбрано слов <span class="pos-pag__delete-count">1</span></span>
+            </div>
+            <div class="pos-pag__wrap">
+              <div class="pos-pag__pages">
+                <svg class="pos-pag__arrow-1" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.28697 1.92L2.7585 8.39349L2.65108 8.5L2.7585 8.60651L9.28696 15.08L8.06794 16.2888L0.213035 8.5L8.06794 0.711241L9.28697 1.92Z" fill="#747474" stroke="white" stroke-width="0.3" />
+                </svg>
+                <span>Страница</span>
+                <input type="text" class="input short--input" value="1">
+                <span>Из 5</span>
+                <svg class="pos-pag__arrow-2" width="10" height="17" viewBox="0 0 10 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.213035 1.92L6.7415 8.39349L6.84892 8.5L6.7415 8.60651L0.213036 15.08L1.43206 16.2888L9.28697 8.5L1.43206 0.711241L0.213035 1.92Z" fill="#747474" stroke="white" stroke-width="0.3" />
+                </svg>
+              </div>
+              <div class="pos-pag__items">
+                <div class="pos-pag__variables">
+                  <button class="pos-pag-button btn-reset">
+                    <span>50</span>
+                    <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.5714 6.5C10.651 6.5 10.729 6.52069 10.7967 6.55974C10.8644 6.59879 10.9192 6.65467 10.9548 6.72111C10.9903 6.78756 11.0054 6.86194 10.9983 6.93592C10.9911 7.00991 10.962 7.08057 10.9143 7.14L8.34286 10.34C8.30294 10.3897 8.25117 10.43 8.19166 10.4578C8.13215 10.4855 8.06653 10.5 8 10.5C7.93347 10.5 7.86785 10.4855 7.80834 10.4578C7.74883 10.43 7.69706 10.3897 7.65714 10.34L5.08572 7.14C5.03796 7.08057 5.00888 7.00991 5.00173 6.93592C4.99458 6.86194 5.00965 6.78756 5.04525 6.72112C5.08084 6.65467 5.13555 6.59879 5.20326 6.55974C5.27096 6.52069 5.34898 6.5 5.42857 6.5L10.5714 6.5Z" fill="#747474" />
+                    </svg>
+                  </button>
+                  <div class="project__dropdown-wrapper">
+                    <div class="pos-pag__variable">50</div>
+                    <div class="pos-pag__variable">100</div>
+                    <div class="pos-pag__variable">500</div>
+                    <div class="pos-pag__variable">1000</div>
                   </div>
                 </div>
               </div>

@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   //  Пример отправки формы  ------------------------------------------------------------
 
-  //Тип формы. Auto -> true, false
+  //Тип формы в popup. Auto -> true, false
   document.querySelector(".pop-variable").addEventListener("click", (e) => {
     const form1 = document.querySelector(".project-form-auto-f");
     const form2 = document.querySelector(".project-form-auto-t");
@@ -124,4 +124,52 @@ document.addEventListener("DOMContentLoaded", () => {
     .addEventListener("click", () => {
       document.querySelector(".popup-background").classList.add("active");
     });
+
+  //------------------------------------- POSITIONS
+
+  // const hideDay = () => {
+
+  // }
+
+  let itemPosActiveCount = 0;
+  const itemsEvent = () => {
+    const allItems = document.querySelectorAll(".item-pos");
+    const deleteButton = document.querySelector(".pos-pag__delete");
+    const deleteCount = document.querySelector(".pos-pag__delete-count");
+    const wrap = document.querySelector(".pos-pag__wrap");
+
+    allItems.forEach((el) => {
+      const input = el.querySelector("input");
+      input.addEventListener("click", () => {
+        input.checked ? itemPosActiveCount++ : itemPosActiveCount--;
+        //Показать или убрать кнопку удалить
+        itemPosActiveCount > 0
+          ? (deleteButton.style.display = "flex")
+          : (deleteButton.style.display = "none");
+
+        itemPosActiveCount > 0
+          ? (wrap.style.justifyContent = "flex-end")
+          : (wrap.style.justifyContent = "space-between");
+        deleteCount.textContent = itemPosActiveCount;
+      });
+    });
+  };
+  itemsEvent();
+
+  //Сокращенный вид
+  const shortPositions = () => {
+    const checkbox = document
+      .querySelector(".settings__cut")
+      .querySelector("input");
+    const positions = document.querySelector(".positions");
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        return positions.classList.add("positions--short");
+      }
+      return positions.classList.remove("positions--short");
+    });
+  };
+  shortPositions();
+
+  //POSITIONS -------------------------------------
 });

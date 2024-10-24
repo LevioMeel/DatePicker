@@ -164,6 +164,23 @@ const sidebar = () => {
       window.addEventListener("keydown", (e) => {
         r && "Escape" === e.key && c();
       });
+  },
+  countPages = () => {
+    const t = document.querySelector(".pos-pag__variables");
+    var e = t.querySelector(".pos-pag-button");
+    let r = !1;
+    const c = () => {
+      t.classList.remove("active"), (r = !1);
+    };
+    e.addEventListener("click", () => {
+      t.classList.toggle("active"), (r = !r);
+    }),
+      window.addEventListener("click", (e) => {
+        r && !t.contains(e.target) && c();
+      }),
+      window.addEventListener("keydown", (e) => {
+        r && "Escape" === e.key && c();
+      });
   };
 
 sidebar(),
@@ -174,7 +191,8 @@ sidebar(),
   popProject(),
   popFolders(),
   downloads(),
-  settings();
+  settings(),
+  countPages();
 
 function changeContent(itemsParent, itemClass, close) {
   const items = itemsParent.querySelectorAll(".folder");
